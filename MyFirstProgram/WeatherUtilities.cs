@@ -16,7 +16,7 @@ namespace MyUtilities
         }
 
         // The higher the number, the lower the comfort.
-        // Private because it is not used in another file
+        // Private because it is not used in another file, only called within the file.
         private static float ComfortIndex(float temperatureFahrenheit, float humidityPercent)
         {
             // Probably not a very reliable formula:
@@ -26,7 +26,7 @@ namespace MyUtilities
         public static void Report(string location, float temperatureCelsius, float humidity)
         {
             var temperatureFahrenheit = CelsiusToFahrenheit(temperatureCelsius);
-            // Interpolated string holding variables rather than concatenated string
+            // Interpolated string holding variables rather than concatenated string.
             Console.WriteLine($"Comfort Index for {location}: {ComfortIndex(temperatureFahrenheit, humidity)}");
         }
     }
